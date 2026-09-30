@@ -42,6 +42,17 @@ Over 11,000 tons of artificial objects currently orbit Earth. While active satel
 11. **Digital Passport & Certificate:** Progress tracker awarding badges ("Historian", "Time Capsule", "Signal Tuner") and downloadable NASA Space Apps Adoption Certificates.
 
 ---
+## Project Structure
+adopt-a-satellite/
+├── index.html          # Entry point
+├── assets/             # Images, icons, and UI mockups
+├── scripts/
+│   ├── main.js         # UI logic & state management
+│   ├── orbital.js      # satellite.js integration & TLE parser
+│   └── audio.js        # Web Audio API Morse FX
+└── README.md
+
+
 
 ## Technical Architecture & Data Flow
 
