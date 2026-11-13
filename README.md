@@ -1,3 +1,4 @@
+
 # Adopt a Satellite: Relic Map
 
 **A privacy-first, offline space-education app for children.** It tells the stories of robotic spacecraft that humans left behind on the Moon, on Mars, and in deep space, and it runs in a browser with no server, no account, and no internet connection.
@@ -6,7 +7,7 @@ Built by **Team Tiny Sparks** for the **NASA Space Apps Challenge 2026**, theme:
 
 > **Disclaimer:** Adopt a Satellite is an independent educational project. It is not an official NASA product.
 >
-> **Status:** Functional Prototype, ready for Local Judging & School Pilot. Works 100% offline.
+> **Status:** Functional prototype, ready for local judging. A school pilot is planned. Works 100% offline.
 >
 > **Live:** https://adoptasatellite.vercel.app/
 > **Submission:** a single self-contained HTML file (all code, styles, and images included).
@@ -33,7 +34,7 @@ Built by **Team Tiny Sparks** for the **NASA Space Apps Challenge 2026**, theme:
 - [Roadmap](#roadmap)
 - [Known issues](#known-issues)
 - [Contributing](#contributing)
-- [AI usage and transparency](#-ai-usage--transparency)
+- [AI usage and transparency](#ai-usage--transparency)
 - [Licence and attribution](#licence-and-attribution)
 
 ---
@@ -84,6 +85,7 @@ Images must be named by relic ID, for example `lo1.webp`, `a11.webp`, `a15.webp`
 ```
 .
 ├── README.md
+├── LICENSE                                 # Apache 2.0 full text (to be added)
 ├── index.html                              # the app (single file, images embedded)
 ├── tools/
 │   ├── embed_images.py                     # embeds WebP images into the app as base64
@@ -120,7 +122,7 @@ This project relies heavily on NASA data. Every relic record carries its own sou
 |---|---|
 | NASA NSSDCA, Pioneer 10 and 11 (`pioneer10-11.html`) | Pioneer 10 and 11 mission facts and dates. |
 | NASA Science, Pioneer 10 "sends last signal" | Pioneer 10 final contact. |
-| NASA Science and NASA history news, Pioneer 11 (45 years ago) | Pioneer 11 launch context. |
+| NASA Science and NASA history news, Pioneer 11 | Pioneer 11 launch context (launched 1973). |
 | NASA Science, Viking 1 and Viking mission pages | Viking mission facts. |
 | NASA Science, Mars Pathfinder mission page | Pathfinder landing and end-of-mission dates. |
 | NASA Science, Sojourner terrain resource | Sojourner context. |
@@ -129,7 +131,7 @@ This project relies heavily on NASA data. Every relic record carries its own sou
 | JPL news, Opportunity mission comes to an end | Opportunity's end of mission. |
 | NASA Science, InSight mission page and NASA news on InSight retirement | InSight dates and mission end. |
 | NASA news release, Ingenuity mission ends | Ingenuity's end of flights. |
-| NASA history, Phoenix launch (15 years ago) | Phoenix launch date and context. |
+| NASA history, Phoenix launch (launched 2007) | Phoenix launch date and context. |
 | JPL, Phoenix mission page | Phoenix mission facts. |
 | NASA Science, Cassini Grand Finale overview and NASA news release on Cassini's end | Cassini's final orbits and atmospheric entry. |
 | JPL, Galileo mission page and NASA Science, Galileo probe | Galileo probe entry into Jupiter's atmosphere. |
@@ -223,10 +225,10 @@ Last recorded result: all 19 records open in both languages, 19 of 19 images sho
 
 ## Accessibility
 
-Built in today, most without any setting:
+Built in, most without any setting:
 
-- **Keyboard:** every main control reachable with Tab, with a visible focus outline.
-- **Screen readers:** labelled buttons and cards (about 17 `aria-label` entries and 16 `role` attributes). Live regions announce results in the re-entry game.
+- **Keyboard:** the main controls can be reached with Tab, with a visible focus outline.
+- **Screen readers:** labelled buttons and cards, with `aria-label` and `role` attributes. Live regions announce results in the re-entry game.
 - **Reduced motion:** animation follows the operating system's "reduce motion" setting.
 - **Dark mode:** follows the device's light or dark setting.
 - **Large touch targets:** interactive buttons are at least 44 px tall.
@@ -289,7 +291,7 @@ Teachers should still supervise shared devices and handle backups, which can con
 
 ---
 
-## 👧👦 Child-Given Reviews
+## Child-Given Reviews
 
 We tested the app with **five children aged 6 to 12**. Their words are below, in the language they used (Bangla) with an English version beside each.
 
@@ -352,36 +354,27 @@ This was an informal test with five children, not a controlled study. The quotes
 
 ## Roadmap
 
-**Before NASA Space Apps submission**
+**Immediate next steps (after judging)**
 
 1. Fix the five Mars records that still show "pending" labels.
 2. Verify dates and coordinates for the newer records against the NASA pages.
 3. Get the Bangla text reviewed by a native speaker.
-4. Test on one real Android phone and one tablet.
-5. Write the short teacher guide in Bangla and English.
+4. Write a short teacher guide in Bangla and English.
+5. Test on Android phones and tablets.
 6. Record a two-minute demo that runs with the internet off.
 
-**After submission**
+**Future goals (2031–2036 vision, plans and not commitments)**
 
 1. Build the accessibility panel (text size, contrast, dyslexia font, read-aloud, simple mode).
 2. Add Bangla and English read-aloud.
 3. Produce printable relic cards, Morse cards, and passport templates.
 4. Run a school pilot in a rural or hill area.
-5. Split the code into modules and add automated tests for storage, import, and audio.
-6. Add more relics, including Earth-orbit satellites, once the review process is in place.
+5. Add an Earth-Orbit Tracker and more relics, including ISS retirement and Artemis-era equipment.
+6. Split the code into modules and add automated tests for storage, import, and audio.
 
 **Coming soon (in development, not in the current file)**
 
-1. **Earth-Orbit Tracker:** an orbit tracker for satellites around Earth.
-2. **Cartoon host:** our own character, built on our own engine. It is not part of this HTML file.
-
-**2031–2036 vision (plans, not commitments)**
-
-- Add relics from the ISS retirement and the first Artemis-era lunar equipment.
-- Explore on-device simplification and read-aloud. A language model would be too large for the single file, so it would need to be a separate cached download, with all processing on the device.
-- Release the code under an open licence so other regions can build their own relic maps.
-- Explore Web Bluetooth haptic devices for blind and deaf children. Note that Web Bluetooth does not work in most iPhone browsers.
-- Publish new relics as offline modules after a mission's final signal, if archive partnerships are formed. None exist yet.
+- **Earth-Orbit Tracker:** an orbit tracker for satellites around Earth.
 
 ---
 
@@ -411,7 +404,7 @@ Contributions are welcome, especially:
 
 ---
 
-## 🤖 AI Usage & Transparency
+## AI usage and transparency
 
 AI tools were used as assistants. The team made all design, data, and storytelling decisions and checked the final work.
 
@@ -435,7 +428,9 @@ AI tools were used as assistants. The team made all design, data, and storytelli
 ## Licence and attribution
 
 - **Code:** Apache License 2.0. This matches NASA's default for Space Apps submissions if no OSI licence is chosen, and it is an OSI-approved licence. A `LICENSE` file with the full text must be added to the repository.
-- **NASA material:** facts, dates, coordinates, and photos come from NASA and other public sources, as listed in [Data sources](#data-sources-nasa-and-others). Each NASA image's reuse terms should be confirmed and recorded before publication. Space Apps rules require third-party licence documentation to be included with the submission.
+- **NASA material:** facts, dates, coordinates, and photos come from NASA and other public sources, as listed in [Data sources](#data-sources-nasa-and-others). Each NASA image's reuse terms should be confirmed and recorded before publication.
 - **Team:** Team Tiny Sparks, NASA Space Apps Challenge 2026.
 
 Thanks to the NASA teams behind the mission archives, the NSSDCA landing-site tables, the JPL Photojournal, the Lunar Reconnaissance Orbiter Camera, and the Apollo Lunar Surface Journal, whose public records made every relic story possible.
+```
+
